@@ -1,11 +1,7 @@
 #!/bin/bash
 chown betty hello
-#!/bin/bash
-chown betty hello
-#!/bin/bash
-chown betty hello
-#!/bin/bash
-chown betty hello
+
+
 #!/bin/bash
 chown betty hello
 #!/bin/bash
