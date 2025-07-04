@@ -1,2 +1,2 @@
-echo -e '#!/bin/bash\necho "$PATH" | tr ":" "\n" | grep -c .' > 3-paths
-chmod +x 3-paths
+#!/bin/bash
+echo "$PATH" | tr ':' '\n' | grep -v '^$' | wc -l
