@@ -1,3 +1,4 @@
 #!/bin/bash
+# This script shows bash processes by using ps and grep (no pgrep allowed)
 # shellcheck disable=SC2009
-ps -ef | grep bash
+ps aux | grep bash

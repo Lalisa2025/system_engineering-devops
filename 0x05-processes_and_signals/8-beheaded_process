@@ -1,4 +1,3 @@
 #!/bin/bash
-
-pid=$(ps -ef | grep "7-highlander" | grep -v grep | awk '{print $2}')
-[ -n "$pid" ] && kill -9 "$pid"
+# This script kills the 7-highlander process
+pkill -f 7-highlander

@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script prints forever and traps SIGTERM to say "I am invincible!!!"
 
 trap "echo 'I am invincible!!!'" SIGTERM
 

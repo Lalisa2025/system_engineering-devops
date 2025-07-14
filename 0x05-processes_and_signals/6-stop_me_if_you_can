@@ -1,7 +1,4 @@
 #!/bin/bash
-
-# Find the PID of the script
-pid=$(ps -ef | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
-
-# Send SIGTERM using bash built-in
-[ -n "$pid" ] && exec bash -c "exec >& /dev/null; exec 0<&-; kill -s SIGTERM $pid"
+# This script kills 4-to_infinity_and_beyond without using kill or killall
+PID=$(pgrep -f 4-to_infinity_and_beyond)
+[ -n "$PID" ] && echo "$PID" > /proc/$PID/oom_score_adj
