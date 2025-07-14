@@ -1,3 +1,2 @@
 #!/bin/bash
-# This script displays all running processes in a user-oriented format with a hierarchy
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+ps
