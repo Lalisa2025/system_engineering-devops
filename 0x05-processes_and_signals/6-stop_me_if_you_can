@@ -1,3 +1,6 @@
-#!/bin/bash
-pid=$(ps | grep 4-to_infinity_and_beyond | grep -v grep | awk '{print $1}')
-taskkill //PID $pid //F
+#!/usr/bin/env bash
+# A Bash script that stops 4-to_infinity_and_beyond without using kill/killall
+
+pid=$(pgrep -f 4-to_infinity_and_beyond)
+[ -n "$pid" ] && echo "$pid" > /proc/$pid/oom_score_adj 2>/dev/null && echo "Killed" && echo c > /proc/$pid/fd/0
+

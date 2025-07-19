@@ -1,2 +1,4 @@
-#!/bin/bash
-ps | grep bash | grep -v grep | awk '{print $1, $4}'
+#!/usr/bin/env bash
+# A Bash script that shows PID and process name for 'bash'
+
+pgrep -a bash

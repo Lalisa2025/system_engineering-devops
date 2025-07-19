@@ -1,3 +1,4 @@
-#!/bin/bash
-pid=$(ps | grep 4-to_infinity_and_beyond | grep -v grep | awk '{print $1}')
-kill "$pid"
+#!/usr/bin/env bash
+# A Bash script that kills the 4-to_infinity_and_beyond process
+
+pkill -f 4-to_infinity_and_beyond

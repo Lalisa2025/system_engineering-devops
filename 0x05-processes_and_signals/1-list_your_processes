@@ -1,2 +1,4 @@
-#!/bin/bash
-ps
+#!/usr/bin/env bash
+# A Bash script that lists all processes in a user-oriented format with hierarchy
+
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
